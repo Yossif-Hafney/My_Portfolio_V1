@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Allow all crawlers to access all content
+# This is good for a portfolio site as you want maximum visibility
+
+# Block access to sensitive or unnecessary files/directories
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
+
+# Allow common portfolio assets
+Allow: /images/
+Allow: /api/
+Allow: /assets/
+
+# Crawl delay (optional - removes this if not needed)
+# Crawl-delay: 1

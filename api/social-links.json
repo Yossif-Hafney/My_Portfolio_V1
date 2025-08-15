@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Facebook",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/yossif.hafney/"
+  },
+  {
+    "id": 2,
+    "name": "GitHub",
+    "icon": "github",
+    "url": "https://github.com/Yossif-Hafney/"
+  },
+  { "id": 3, "name": "X", "icon": "x", "url": "https://x.com/youssefhafney" },
+  {
+    "id": 4,
+    "name": "Telegram",
+    "icon": "telegram",
+    "url": "https://t.me/webdevelopment1973"
+  },
+  {
+    "id": 5,
+    "name": "Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/yossifhafney1/"
+  },
+  {
+    "id": 6,
+    "name": "LinkedIn",
+    "icon": "linkedin",
+    "url": "https://www.linkedin.com/in/yossif-hafney-22174533b/"
+  }
+]

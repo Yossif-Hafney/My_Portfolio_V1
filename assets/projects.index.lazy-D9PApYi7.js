@@ -1,0 +1,1 @@
+import{c as o,j as t}from"./index-z1eQj2TF.js";import{P as e}from"./Projects-DIK9vGIo.js";import"./useProject-C2rB3WJV.js";const m=o("/projects/")({component:r});function r(){return t.jsx(e,{})}export{m as Route};
