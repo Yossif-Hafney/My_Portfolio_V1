@@ -5,11 +5,11 @@
     "description": "A clone of the Facebook user interface built with React. This project replicates the core layout, navigation, and visual style of Facebook's modern UI, including responsive design, interactive components, and a clean, modular codebase. It demonstrates advanced use of React for component composition, state management, and UI effects, as well as Tailwind CSS for rapid, utility-first styling. Ideal for learning modern frontend techniques and UI/UX best practices.",
     "shortDescription": "A modern Facebook UI clone built with React and Tailwind CSS.",
     "fullDescription": "This project is a detailed clone of the Facebook user interface, focusing on layout, navigation, and interactivity. It showcases advanced React patterns, state management, and responsive design using Tailwind CSS. The project is ideal for learning how to structure large-scale React apps and implement real-world UI/UX best practices.",
-    "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg?t=st=1757947824~exp=1757951424~hmac=fd550da0f84dd9dadf70dac9de992991fade703d05dcd7fabf9dd801380cf8b0&w=1480",
+    "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901778.jpg?t=st=1757951236~exp=1757954836~hmac=e646a9923e35a334fef3be7b5acbc2a30d018b6b924967c997ac44e37889b490&w=1480",
     "gallery": [
       "https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040427.jpg?t=st=1757947790~exp=1757951390~hmac=e104765e46991d017d571e536ba3996390b9ef8888c8b3536a48b448cbce89cc&w=1480",
-      "https://img.freepik.com/free-photo/person-working-laptop_36189958.jpg?t=st=1757947790~exp=1757951390~hmac=5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5&w=1480",
-      "https://img.freepik.com/free-photo/person-working-laptop_3618995z7.jpg?t=st=1757947790~exp=1757951390~hmac=5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5&w=1480"
+      "https://img.freepik.com/free-photo/programming-background-collage_23-2149901769.jpg?t=st=1757951359~exp=1757954959~hmac=22834af152125a6c4a540f45b9a224712c9ff25af6aee28126f2b02f2a87c1fb&w=740",
+      "https://img.freepik.com/free-vector/atom-science-education-icon-vector-neon-digital-graphic_53876-114080.jpg?t=st=1757951443~exp=1757955043~hmac=409837d6061f9ecb8dfe0965d4b05cf9f70333952af6a6bcf3f97acee4a0cb72&w=740"
     ],
     "technologies": ["React", "Tailwind CSS"],
     "features": [
