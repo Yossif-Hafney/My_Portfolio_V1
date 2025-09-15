@@ -2,25 +2,31 @@
   {
     "id": 1,
     "title": "Facebook UI Clone",
+    "description": "A clone of the Facebook user interface built with React. This project replicates the core layout, navigation, and visual style of Facebook's modern UI, including responsive design, interactive components, and a clean, modular codebase. It demonstrates advanced use of React for component composition, state management, and UI effects, as well as Tailwind CSS for rapid, utility-first styling. Ideal for learning modern frontend techniques and UI/UX best practices.",
     "shortDescription": "A modern Facebook UI clone built with React and Tailwind CSS.",
-    "fullDescription": "This project is a detailed clone of the Facebook user interface, created using React for component-driven development and Tailwind CSS for rapid, utility-first styling. It replicates Facebook's layout, navigation, and interactive elements, including a responsive design that works across devices. The project demonstrates advanced React patterns, state management, and UI/UX best practices. It's ideal for learning how to structure large-scale frontend applications and implement real-world design systems.",
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-    "technologies": ["React", "Tailwind CSS"],
-    "branches": ["Web Development", "UI/UX", "Frontend"],
-    "status": "Completed",
+    "fullDescription": "This project is a detailed clone of the Facebook user interface, focusing on layout, navigation, and interactivity. It showcases advanced React patterns, state management, and responsive design using Tailwind CSS. The project is ideal for learning how to structure large-scale React apps and implement real-world UI/UX best practices.",
+    "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg?t=st=1757947824~exp=1757951424~hmac=fd550da0f84dd9dadf70dac9de992991fade703d05dcd7fabf9dd801380cf8b0&w=1480",
     "gallery": [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+      "https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040427.jpg?t=st=1757947790~exp=1757951390~hmac=e104765e46991d017d571e536ba3996390b9ef8888c8b3536a48b448cbce89cc&w=1480",
+      "https://img.freepik.com/free-photo/person-working-laptop_36189958.jpg?t=st=1757947790~exp=1757951390~hmac=5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5&w=1480",
+      "https://img.freepik.com/free-photo/person-working-laptop_3618995z7.jpg?t=st=1757947790~exp=1757951390~hmac=5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5f5c5&w=1480"
     ],
+    "technologies": ["React", "Tailwind CSS"],
     "features": [
-      "Responsive Facebook-like layout",
+      "Responsive layout mimicking Facebook's UI",
       "Reusable React components",
       "Modern navigation and sidebar",
-      "Interactive UI elements",
       "Dark mode support",
+      "Profile, feed, and notifications UI",
       "Utility-first styling with Tailwind CSS"
     ],
+    "status": "Completed",
+    "branches": ["Web Development", "Frontend", "UI Clone"],
     "liveDemo": "https://just-ui-one.vercel.app/",
-    "sourceCode": "https://github.com/Yossif-Hafney/Just-UI"
+    "sourceCode": "https://github.com/Yossif-Hafney/Just-UI",
+    "category": "Web Development",
+    "client": "Personal Project",
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-15"
   }
 ]
