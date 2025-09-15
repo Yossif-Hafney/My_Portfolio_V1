@@ -4,12 +4,23 @@ A modern React portfolio showcasing projects with smart navigation and caching.
 
 ## Quick Start
 
+**Prerequisites:** Node.js 18+ and npm
+
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd portfolio
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-Visit `http://localhost:5173`
+Open your browser and visit: `http://localhost:5173`
+
+The app will automatically reload when you make changes.
 
 ## Stack
 
@@ -37,18 +48,16 @@ npm run lint     # Code linting
 
 ## Project Structure
 
-```
 src/
-├── routes/              # File-based routing
-├── pages/              # Page components (Projects, ProjectDetails)
-├── components/         # Reusable UI components
-├── hooks/              # Data fetching with React Query
-└── main.tsx           # App entry point
+├── routes/ # File-based routing
+├── pages/ # Page components (Projects, ProjectDetails)
+├── components/ # Reusable UI components
+├── hooks/ # Data fetching with React Query
+└── main.tsx # App entry point
 
-public/api/             # Static JSON data
-├── projects-simple.json    # List view data
-└── project-details.json   # Detail view data
-```
+public/api/ # Static JSON data
+├── projects-simple.json # List view data
+└── project-details.json # Detail view data
 
 ## Data Management
 
@@ -65,9 +74,43 @@ React Query handles caching with 5-10 minute stale times and hover prefetching.
 2. **Project Details** (`/projects/:id`) - Full detail page
 3. **Smart Return** - Preserves scroll position and loaded items
 
-## Development
+### Local Development Setup
 
-For detailed development guide, see `CONTRIBUTING.md`.
+**Prerequisites:** Node.js 18+ (download from [nodejs.org](https://nodejs.org/))
+
+**Setup steps:**
+
+**Step 1:** Clone the repository:
+
+```bash
+git clone <repository-url>
+cd portfolio
+```
+
+**Step 2:** Install dependencies:
+
+```bash
+npm install
+```
+
+**Step 3:** Start development server:
+
+```bash
+npm run dev
+```
+
+- Opens at `http://localhost:5173`
+- Hot reload enabled for instant changes
+- React Query devtools available in browser
+
+**Step 4:** Build for production:
+
+```bash
+npm run build
+npm run preview  # Test production build locally
+```
+
+### Available Scripts
 
 ### Adding New Projects
 
@@ -102,11 +145,17 @@ npx vercel deploy --prebuilt --prod
 
 ## Architecture
 
+```mermaid
+graph LR
+    A[JSON APIs] --> B[React Query]
+    B --> C[Custom Hooks]
+    C --> D[Pages]
+    D --> E[Components]
+    E --> F[UI]
+    G[Session Storage] --> D
 ```
-JSON APIs → React Query → Custom Hooks → Pages → Components → UI
-     ↓
-Session Storage (scroll position, filters, loaded count)
-```
+
+Data flows from static JSON through React Query hooks to pages and components. Session storage preserves scroll position, filters, and loaded count for seamless navigation.
 
 ## Browser Support
 

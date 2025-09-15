@@ -12,5 +12,4 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
   ],
-  base: '/My_Portfolio_V1/', // 👈 put your repo name here
 });

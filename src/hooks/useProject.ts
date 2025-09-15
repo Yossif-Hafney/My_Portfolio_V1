@@ -20,7 +20,7 @@ export type ProjectDetail = {
 };
 
 export function useProject(projectId: string | number) {
-  const id = Number(projectId);
+  const id = projectId;
   const { data, isLoading, error } = useQuery<ProjectDetail[], Error>({
     queryKey: ["project-details"],
     queryFn: async () => {
@@ -34,10 +34,12 @@ export function useProject(projectId: string | number) {
     enabled: !!id,
   });
 
-  const project = useMemo(
-    () => (data ? (data.find((p) => p.id === id) ?? null) : null),
-    [data, id]
-  );
+  const project = useMemo(() => {
+    if (!data) return null;
+    return (
+      data.find((p) => String(p.id) === String(id)) ?? null
+    );
+  }, [data, id]);
 
   return {
     project,

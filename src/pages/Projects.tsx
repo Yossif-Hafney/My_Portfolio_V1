@@ -33,6 +33,11 @@ export default function Projects({
   // Use custom hooks
   const { projects, loading, error } = useProjects();
   const prefetchDetails = usePrefetchProjectDetails();
+  // Map ApiProject[] to Project[] to ensure 'image' is always a string
+  const normalizedProjects = projects.map((p) => ({
+    ...p,
+    image: typeof p.image === "string" ? p.image : "",
+  }));
   const {
     query,
     setQuery,
@@ -43,7 +48,7 @@ export default function Projects({
     filteredProjects,
     isFiltering,
     resetFilters,
-  } = useProjectFilter(projects);
+  } = useProjectFilter(normalizedProjects);
 
   // Restore state (filters, visible count, scroll) once on mount
   useEffect(() => {
@@ -242,40 +247,50 @@ export default function Projects({
                 </div>
               ) : (
                 <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                  {displayedProjects.map((p) => (
-                    <ProjectCard
-                      key={p.id}
-                      id={p.id}
-                      image={p.image}
-                      title={p.title}
-                      description={p.description}
-                      tags={p.tags}
-                      onClick={() => {
-                        try {
-                          const state = {
-                            query,
-                            branch,
-                            displayCount,
-                            scrollY: window.scrollY,
-                            pageH: document.documentElement.scrollHeight,
-                            ts: Date.now(),
-                          };
-                          sessionStorage.setItem(
-                            "projects:listState",
-                            JSON.stringify(state)
-                          );
-                          sessionStorage.setItem(
-                            "projects:lastViewedId",
-                            String(p.id)
-                          );
-                        } catch (e) {
-                          if (import.meta.env.DEV)
-                            console.debug("persist before nav failed", e);
-                        }
-                      }}
-                      onMouseEnter={prefetchDetails}
-                    />
-                  ))}
+                  {displayedProjects.map((p) => {
+                    // Ensure id is a number and image is a string for ProjectCard
+                    let idNum: number =
+                      typeof p.id === "number"
+                        ? p.id
+                        : parseInt(p.id as string, 10);
+                    if (isNaN(idNum)) idNum = 0;
+                    const imageStr: string =
+                      typeof p.image === "string" ? p.image : "";
+                    return (
+                      <ProjectCard
+                        key={idNum}
+                        id={idNum}
+                        image={imageStr}
+                        title={p.title}
+                        description={p.description}
+                        tags={p.tags}
+                        onClick={() => {
+                          try {
+                            const state = {
+                              query,
+                              branch,
+                              displayCount,
+                              scrollY: window.scrollY,
+                              pageH: document.documentElement.scrollHeight,
+                              ts: Date.now(),
+                            };
+                            sessionStorage.setItem(
+                              "projects:listState",
+                              JSON.stringify(state)
+                            );
+                            sessionStorage.setItem(
+                              "projects:lastViewedId",
+                              String(p.id)
+                            );
+                          } catch (e) {
+                            if (import.meta.env.DEV)
+                              console.debug("persist before nav failed", e);
+                          }
+                        }}
+                        onMouseEnter={prefetchDetails}
+                      />
+                    );
+                  })}
                 </div>
               )}
             </>
@@ -290,12 +305,10 @@ export default function Projects({
           {!showFilters && projects.length > (limit || 6) && (
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <div className="flex justify-center items-center">
-                <button
+                <ButtonComponent
+                  title="View All Projects"
                   onClick={() => navigate({ to: "/projects" })}
-                  className="inline-block"
-                >
-                  <ButtonComponent title="View All Projects" />
-                </button>
+                />
               </div>
             </div>
           )}
