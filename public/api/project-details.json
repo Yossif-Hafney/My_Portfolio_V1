@@ -5,11 +5,11 @@
     "description": "A clone of the Facebook user interface built with React. This project replicates the core layout, navigation, and visual style of Facebook's modern UI, including responsive design, interactive components, and a clean, modular codebase. It demonstrates advanced use of React for component composition, state management, and UI effects, as well as Tailwind CSS for rapid, utility-first styling. Ideal for learning modern frontend techniques and UI/UX best practices.",
     "shortDescription": "A modern Facebook UI clone built with React and Tailwind CSS.",
     "fullDescription": "This project is a detailed clone of the Facebook user interface, focusing on layout, navigation, and interactivity. It showcases advanced React patterns, state management, and responsive design using Tailwind CSS. The project is ideal for learning how to structure large-scale React apps and implement real-world UI/UX best practices.",
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+    "image": "https://www.freepik.com/free-photo/programming-background-collage_34089179.htm#fromView=search&page=1&position=3&uuid=9b21eb4f-64a1-45cc-a6ab-18b55dbf8690&query=web+development",
     "gallery": [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+      "https://www.freepik.com/free-photo/person-front-computer-working-html_36189959.htm#fromView=search&page=1&position=0&uuid=9b21eb4f-64a1-45cc-a6ab-18b55dbf8690&query=web+development",
+      "https://www.freepik.com/free-photo/person-working-laptop_36189958.htm#fromView=search&page=1&position=1&uuid=9b21eb4f-64a1-45cc-a6ab-18b55dbf8690&query=web+development",
+      "https://www.freepik.com/free-photo/person-working-laptop_36189957.htm#fromView=search&page=1&position=2&uuid=9b21eb4f-64a1-45cc-a6ab-18b55dbf8690&query=web+development"
     ],
     "technologies": ["React", "Tailwind CSS"],
     "features": [
