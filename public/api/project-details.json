@@ -1,40 +1,32 @@
 [
   {
     "id": 1,
-    "title": "E-Commerce Platform",
-    "shortDescription": "Full-stack e-commerce solution with payment integration and admin dashboard.",
-    "fullDescription": "A comprehensive e-commerce solution built with modern technologies. This platform includes a customer-facing storefront, an admin dashboard for inventory management, order processing, and analytics. Features include secure payment integration with Stripe, real-time inventory tracking, user authentication, shopping cart functionality, and responsive design for mobile and desktop users.",
+    "title": "Facebook UI Clone",
+    "description": "A clone of the Facebook user interface built with React. This project replicates the core layout, navigation, and visual style of Facebook's modern UI, including responsive design, interactive components, and a clean, modular codebase. It demonstrates advanced use of React for component composition, state management, and UI effects, as well as Tailwind CSS for rapid, utility-first styling. Ideal for learning modern frontend techniques and UI/UX best practices.",
+    "shortDescription": "A modern Facebook UI clone built with React and Tailwind CSS.",
+    "fullDescription": "This project is a detailed clone of the Facebook user interface, focusing on layout, navigation, and interactivity. It showcases advanced React patterns, state management, and responsive design using Tailwind CSS. The project is ideal for learning how to structure large-scale React apps and implement real-world UI/UX best practices.",
     "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
     "gallery": [
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
     ],
-    "technologies": [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "Stripe API",
-      "JWT",
-      "Tailwind CSS"
-    ],
+    "technologies": ["React", "Tailwind CSS"],
     "features": [
-      "User authentication and authorization",
-      "Product catalog with search and filtering",
-      "Shopping cart and checkout process",
-      "Payment integration with Stripe",
-      "Admin dashboard for inventory management",
-      "Order tracking and management",
-      "Responsive design for all devices",
-      "Real-time notifications"
+      "Responsive layout mimicking Facebook's UI",
+      "Reusable React components",
+      "Modern navigation and sidebar",
+      "Dark mode support",
+      "Profile, feed, and notifications UI",
+      "Utility-first styling with Tailwind CSS"
     ],
-    "liveDemo": "https://demo-ecommerce.example.com",
-    "sourceCode": "https://github.com/yourusername/ecommerce-platform",
     "status": "Completed",
-    "startDate": "2024-01-15",
-    "endDate": "2024-03-20",
+    "branches": ["Web Development", "Frontend", "UI Clone"],
+    "liveDemo": "https://just-ui-one.vercel.app/",
+    "sourceCode": "https://github.com/Yossif-Hafney/Just-UI",
+    "category": "Web Development",
     "client": "Personal Project",
-    "branches": ["Web Development", "Full-Stack", "E-commerce"]
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-15"
   }
 ]
