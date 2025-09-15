@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yossifhafney.vercel.app/sitemap.xml
 
 # Allow all crawlers to access all content
 # This is good for a portfolio site as you want maximum visibility
