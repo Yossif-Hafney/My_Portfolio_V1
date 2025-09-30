@@ -22,7 +22,7 @@
     ],
     "status": "Completed",
     "branches": ["Web Development", "Frontend", "UI Clone"],
-    "liveDemo": "https://justui.vercel.app/",
+    "liveDemo": "https://just-ui.netlify.app/",
     "sourceCode": "https://github.com/Yossif-Hafney/Just-UI",
     "category": "Web Development",
     "client": "Personal Project",

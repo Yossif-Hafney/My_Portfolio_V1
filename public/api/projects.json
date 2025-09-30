@@ -5,7 +5,7 @@
     "description": "A clone of the Facebook user interface built with React.",
     "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901778.jpg?t=st=1757951236~exp=1757954836~hmac=e646a9923e35a334fef3be7b5acbc2a30d018b6b924967c997ac44e37889b490&w=1480",
     "technologies": ["React", "Tailwind CSS"],
-    "demoUrl": "https://just-ui-one.vercel.app/",
+    "demoUrl": "https://just-ui.netlify.app/",
     "sourceUrl": "https://github.com/Yossif-Hafney/Just-UI",
     "category": "Web Development"
   }
