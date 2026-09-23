@@ -12,6 +12,7 @@ export interface StaticProject {
   demoUrl?: string;
   sourceUrl?: string;
   category?: string;
+  branches?: string[];
 }
 
 export interface StaticApiProject {
@@ -23,6 +24,7 @@ export interface StaticApiProject {
   technologies: string[];
   github?: string;
   demo?: string;
+  branches?: string[];
   status: "planning" | "in-progress" | "completed";
   createdAt: string;
   updatedAt: string;
@@ -66,10 +68,13 @@ class StaticProjectsApi {
         title: project.title,
         description: project.description,
         image: project.image || "",
-        tags: project.technologies?.slice(0, 3) || [],
+        tags: project.technologies?.slice(0, 4) || [],
         technologies: project.technologies || [],
         github: project.sourceUrl || "",
         demo: project.demoUrl || "",
+        branches:
+          project.branches ||
+          (project.category ? [project.category] : ["Web Development"]),
         status: "completed" as const,
         createdAt: new Date(
           Date.now() - index * 24 * 60 * 60 * 1000
