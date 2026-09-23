@@ -4,4 +4,40 @@ html {
 }
 body {
   background-color: rgb(13 36 56);
+  color: rgb(226 232 240);
+}
+
+::selection {
+  background: rgb(14 165 233 / 0.35);
+}
+
+.thumb-rail {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(56 189 248 / 0.85) rgb(15 23 42 / 0.9);
+  scrollbar-gutter: stable;
+}
+
+.thumb-rail::-webkit-scrollbar {
+  height: 8px;
+}
+
+.thumb-rail::-webkit-scrollbar-track {
+  margin-inline: 6px;
+  background: rgb(15 23 42 / 0.9);
+  border: 1px solid rgb(51 65 85 / 0.8);
+  border-radius: 999px;
+}
+
+.thumb-rail::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(56 189 248), rgb(99 102 241));
+  border: 2px solid rgb(15 23 42);
+  border-radius: 999px;
+}
+
+.thumb-rail::-webkit-scrollbar-thumb:hover {
+  background: rgb(125 211 252);
+}
+
+.thumb-rail::-webkit-scrollbar-corner {
+  background: transparent;
 }
