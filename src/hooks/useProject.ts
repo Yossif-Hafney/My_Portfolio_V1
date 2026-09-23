@@ -11,6 +11,7 @@ export type ProjectDetail = {
   technologies: string[];
   features: string[];
   liveDemo?: string;
+  liveCta?: string;
   sourceCode?: string;
   status: string;
   startDate: string;
