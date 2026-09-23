@@ -1,9 +1,12 @@
+import SkillsGrid from "../components/SkillsGrid";
+import SkillBadge from "../components/SkillIcon";
+import { featuredSkills, profile } from "../data/profile";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-6xl mx-auto">
-          {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               About{" "}
@@ -12,15 +15,12 @@ export default function About() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate Frontend Developer dedicated to crafting
-              exceptional digital experiences through clean code and innovative
-              design.
+              I am {profile.name}, a frontend developer who ships clean,
+              responsive interfaces and understands the systems behind them.
             </p>
           </div>
 
-          {/* Main Content */}
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            {/* Introduction Card */}
             <div className="lg:col-span-2">
               <div
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 
@@ -32,38 +32,37 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    I specialize in building modern, responsive web applications
-                    using cutting-edge technologies. My passion lies in
-                    transforming complex problems into simple, beautiful, and
-                    intuitive solutions.
+                    I specialize in modern frontend work with TypeScript,
+                    JavaScript, HTML, and CSS. I build applications with React
+                    and Next.js, and I also work with Vue and Nuxt.js when the
+                    product needs that stack.
                   </p>
                   <p>
-                    With a strong foundation in React, TypeScript, and modern
-                    CSS frameworks, I create applications that not only look
-                    great but also provide exceptional user experiences across
-                    all devices and platforms.
+                    Alongside UI work, I keep a strong foundation in Java, OOP,
+                    data structures, databases, and networks. That mix helps me
+                    reason about APIs, performance, and how a frontend should
+                    talk to the rest of the system.
                   </p>
                   <p>
-                    I believe in writing clean, maintainable code and staying
-                    up-to-date with the latest industry trends and best
-                    practices. Every project is an opportunity to learn
-                    something new and push the boundaries of what's possible.
+                    I care about readable code, accessible layouts, and pages
+                    that feel fast on real devices — not just in a design file.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Quick Stats */}
             <div className="space-y-6">
               <div
                 className="bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-sm 
                 rounded-2xl p-6 border border-blue-500/20 shadow-xl"
               >
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  Experience
-                </h3>
-                <p className="text-3xl font-bold text-blue-400 mb-1">3+</p>
-                <p className="text-gray-300 text-sm">Years of Development</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Focus</h3>
+                <p className="text-3xl font-bold text-blue-400 mb-1">
+                  Frontend
+                </p>
+                <p className="text-gray-300 text-sm">
+                  React, Next.js, Vue, Nuxt.js
+                </p>
               </div>
 
               <div
@@ -71,10 +70,10 @@ export default function About() {
                 rounded-2xl p-6 border border-purple-500/20 shadow-xl"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">
-                  Projects
+                  Languages
                 </h3>
-                <p className="text-3xl font-bold text-purple-400 mb-1">50+</p>
-                <p className="text-gray-300 text-sm">Completed Projects</p>
+                <p className="text-3xl font-bold text-purple-400 mb-1">TS / JS</p>
+                <p className="text-gray-300 text-sm">Plus HTML, CSS, and Java</p>
               </div>
 
               <div
@@ -82,107 +81,63 @@ export default function About() {
                 rounded-2xl p-6 border border-green-500/20 shadow-xl"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">
-                  Satisfaction
+                  Foundations
                 </h3>
-                <p className="text-3xl font-bold text-green-400 mb-1">100%</p>
-                <p className="text-gray-300 text-sm">Client Satisfaction</p>
+                <p className="text-3xl font-bold text-green-400 mb-1">CS</p>
+                <p className="text-gray-300 text-sm">
+                  OOP, DS, databases, networks
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Skills & Technologies */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Technical Skills */}
-            <div
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 
-              shadow-2xl hover:shadow-blue-500/10 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <span className="w-2 h-8 bg-gradient-to-b from-green-400 to-blue-600 rounded-full mr-3"></span>
-                Technical Skills
-              </h3>
-              <div className="space-y-4">
-                {[
-                  { name: "React & TypeScript", level: 95 },
-                  { name: "Tailwind CSS", level: 90 },
-                  { name: "JavaScript (ES6+)", level: 92 },
-                  { name: "Responsive Design", level: 88 },
-                  { name: "API Integration", level: 85 },
-                ].map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-blue-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-slate-700 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-400 to-purple-600 h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          <SkillsGrid compact />
+
+          <div className="mt-4 bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60">
+            <h3 className="text-2xl font-bold text-white mb-6">All skills</h3>
+            <div className="flex flex-wrap gap-2">
+              {featuredSkills.map((skill) => (
+                <SkillBadge key={skill} name={skill} />
+              ))}
             </div>
+          </div>
 
-            {/* Approach & Values */}
-            <div
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 
-              shadow-2xl hover:shadow-purple-500/10 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <span className="w-2 h-8 bg-gradient-to-b from-purple-400 to-pink-600 rounded-full mr-3"></span>
-                My Approach
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">
-                      User-Centered Design
-                    </h4>
-                    <p className="text-gray-300 text-sm">
-                      Every decision prioritizes user experience and
-                      accessibility.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">Clean Code</h4>
-                    <p className="text-gray-300 text-sm">
-                      Writing maintainable, scalable code that stands the test
-                      of time.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">
-                      Performance First
-                    </h4>
-                    <p className="text-gray-300 text-sm">
-                      Optimizing for speed and efficiency in every application.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full mt-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">
-                      Continuous Learning
-                    </h4>
-                    <p className="text-gray-300 text-sm">
-                      Staying current with evolving technologies and best
-                      practices.
-                    </p>
-                  </div>
-                </div>
+          <div className="mt-8 bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60">
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <span className="w-2 h-8 bg-gradient-to-b from-purple-400 to-pink-600 rounded-full mr-3"></span>
+              My Approach
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-white font-medium mb-1">
+                  User-centered UI
+                </h4>
+                <p className="text-gray-300 text-sm">
+                  Clear layouts, readable type, and interactions that make sense
+                  on phone and desktop.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-medium mb-1">Clean code</h4>
+                <p className="text-gray-300 text-sm">
+                  Typed, maintainable components instead of one-off markup.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-medium mb-1">
+                  Performance first
+                </h4>
+                <p className="text-gray-300 text-sm">
+                  Fast loads and smooth navigation so the product feels solid.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-medium mb-1">
+                  Continuous learning
+                </h4>
+                <p className="text-gray-300 text-sm">
+                  Staying current with React, Vue, and the wider web platform.
+                </p>
               </div>
             </div>
           </div>
