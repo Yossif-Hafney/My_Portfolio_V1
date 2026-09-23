@@ -38,6 +38,10 @@ export default function ProjectSectionHeader({
               >
                 Featured Projects
               </h2>
+              <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
+                Selected work including WFDP, the client dashboard, and UI
+                experiments.
+              </p>
             </div>
           </div>
         </div>

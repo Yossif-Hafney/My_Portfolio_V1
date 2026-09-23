@@ -14,6 +14,8 @@ import {
   Bookmark,
 } from "lucide-react";
 import { Loading, ErrorState, Toast } from "../components";
+import ImageSlider from "../components/ImageSlider";
+import SkillBadge from "../components/SkillIcon";
 import { useProject } from "../hooks";
 
 // using the typed hook useProject for data fetching
@@ -22,7 +24,6 @@ export default function ProjectDetails() {
   const { projectid: projectId } = useParams({ from: "/projects/$projectid" });
   const navigate = useNavigate();
   const { project, loading, error } = useProject(projectId);
-  const [selectedImage, setSelectedImage] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [copiedToast, setCopiedToast] = useState(false);
 
@@ -38,11 +39,6 @@ export default function ProjectDetails() {
     }
     navigate({ to: "/projects" });
   };
-
-  // Reset gallery index when project changes
-  useEffect(() => {
-    setSelectedImage(0);
-  }, [project?.id]);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -113,6 +109,8 @@ export default function ProjectDetails() {
     );
   }
 
+  const liveCta = project.liveCta || "Live Demo";
+
   return (
     <div className="min-h-screen bg-[#0d2438]">
       <Toast
@@ -169,16 +167,19 @@ export default function ProjectDetails() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
-                  Live Demo
-                </a>
-                {project.sourceCode !== "Private Repository" && (
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                  >
+                    <Eye className="w-5 h-5 mr-2" />
+                    {liveCta}
+                  </a>
+                )}
+                {project.sourceCode &&
+                  project.sourceCode !== "Private Repository" && (
                   <a
                     href={project.sourceCode}
                     target="_blank"
@@ -214,43 +215,11 @@ export default function ProjectDetails() {
 
         {/* Image Gallery */}
         <div className="bg-[#13283a] border border-slate-800/60 rounded-2xl shadow-lg overflow-hidden mb-8">
-          <div className="p-8">
+          <div className="p-6 sm:p-8">
             <h2 className="text-2xl font-bold text-white mb-6">
               Project Gallery
             </h2>
-            <div className="space-y-6">
-              {/* Main Image */}
-              <div className="aspect-video rounded-xl overflow-hidden bg-slate-800">
-                <img
-                  src={project.gallery[selectedImage]}
-                  alt={`${project.title} - Image ${selectedImage + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Thumbnail Gallery */}
-              {project.gallery.length > 1 && (
-                <div className="flex gap-4 overflow-x-auto pb-2">
-                  {project.gallery.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImage(index)}
-                      className={`flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                        selectedImage === index
-                          ? "border-blue-500 ring-2 ring-blue-500/30"
-                          : "border-slate-700 hover:border-slate-600"
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <ImageSlider images={project.gallery} altPrefix={project.title} />
           </div>
         </div>
 
@@ -293,13 +262,8 @@ export default function ProjectDetails() {
                 Technologies Used
               </h3>
               <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
+                {project.technologies.map((tech) => (
+                  <SkillBadge key={tech} name={tech} />
                 ))}
               </div>
             </div>
@@ -325,16 +289,19 @@ export default function ProjectDetails() {
                 Quick Actions
               </h3>
               <div className="space-y-3">
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Visit Live Site
-                </a>
-                {project.sourceCode !== "Private Repository" && (
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    {project.liveCta || "Visit Live Site"}
+                  </a>
+                )}
+                {project.sourceCode &&
+                  project.sourceCode !== "Private Repository" && (
                   <a
                     href={project.sourceCode}
                     target="_blank"
