@@ -9,6 +9,7 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { profile } from "../data/profile";
 
 type SocialLink = {
   id: number;
@@ -59,8 +60,23 @@ export default function Footer() {
             className="text-center text-xl sm:text-2xl md:text-3xl font-bold tracking-wide
              bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent"
           >
-            Follow Us :
+            Follow me
           </h2>
+          <p className="text-center text-slate-400 text-sm sm:text-base -mt-2">
+            <a
+              className="hover:text-sky-300 transition-colors"
+              href={`mailto:${profile.email}`}
+            >
+              {profile.email}
+            </a>
+            <span className="mx-2 text-slate-600">·</span>
+            <a
+              className="hover:text-sky-300 transition-colors"
+              href={`tel:${profile.phone}`}
+            >
+              {profile.phone}
+            </a>
+          </p>
           <nav
             aria-label="Social links"
             className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 min-h-10 w-full max-w-sm sm:max-w-md overflow-hidden"
